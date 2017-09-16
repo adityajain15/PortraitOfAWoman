@@ -16,6 +16,7 @@
         fragmentByEnd = {},
         fragments = [],
         emptyIndex = -1;
+        //empty
 
     // Stitch empty arcs first, since they may be subsumed by other arcs.
     arcs.forEach(function(i, j) {
