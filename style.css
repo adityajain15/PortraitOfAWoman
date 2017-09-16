@@ -1,0 +1,150 @@
+.textWrapper{
+	margin-top: 80vh;
+	width:70%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+	font-size: 92px;
+	text-align: center;
+	margin-top: 43vh;
+}
+
+span{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+	font-size: 36px;
+	display: block;
+	text-align: center;
+}
+
+.info{
+	display: inline-block;
+	width: 45vw;
+	vertical-align: top;
+}
+
+.slideimage{
+	margin-top: 70vh;
+	height: 70vh;
+	width: auto;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#exactly{
+	margin-top:70vh;
+}
+
+.button{
+	border: 1px solid black;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+
+.section{
+	margin-top: 70vh;
+}
+
+.sectionimage{
+	width: 60%;
+	margin-top: 50px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.selected{
+	background: black;
+	color: white;
+}
+
+.button:hover{
+	background: blue;
+}
+
+.person{
+	width: 80vw;
+	margin-right: auto;
+	margin-top: 70vh;
+	margin-left: auto;
+	text-align: center;
+}
+
+.personimage{
+	display: inline-block;
+	height: 40vh;
+}
+
+#bm{
+	height: 90vh;
+}
+
+svg{
+	width: 50vw;
+	height: 100vh;
+}
+
+html{
+	background: #ffcc00;
+}
+
+.leveloneList{
+	list-style-type:lower-latin;
+	font-size:20px; 
+	font-family:Sabon;
+	font-style:normal;
+	font-weight:normal;
+}
+
+.leveltwoList{
+	list-style-type:lower-roman;
+	font-size:20px; 
+	font-family:Sabon;
+	font-style:normal;
+	font-weight:normal;
+}
+
+.district{
+  stroke: #000;
+  stroke-width:0px;
+}
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-width:0.5px;
+  stroke-linejoin: round;
+}
+
+#tooltip {
+  display: none;
+  top:0px;
+  left: 0px;
+  position: fixed;
+  background: rgba(200,200,200,0.75);
+  border: 1px solid #ddd;
+  padding: 5px 12px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(120,120,120,0.55);
+  text-shadow: 0 1px 0 #eee;
+}
+
+.state-title {
+    font-family: "Nobel";
+    color: #333;
+}
+
+.state-population {
+    font-size: 18px;
+}
+.hover{
+    fill: #FA58F4;
+}

@@ -1,0 +1,164 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script src="d3.js" charset="utf-8"></script>
+	<script src="topojson.js" charset="utf-8"></script>
+</head>
+<body>
+	<h1>The Portrait of a Woman</h1>
+	<span>Aditya Jain</span>
+	<img src="images/route.png" class="slideimage"/>
+	<img src="images/uic.jpg" class="slideimage"/>
+	<img src="images/disc.jpg" class="slideimage"/>
+	<div class="person">
+		<img src="images/italia.jpg" class="personimage" />
+		<img src="images/helvetia.jpg" class="personimage" />
+		<img src="images/handala.jpg" class="personimage" />
+		<img src="images/marianne.jpg" class="personimage" />
+		<img src="images/brit.jpg" class="personimage" />
+		<img src="images/germania.jpg" class="personimage" />
+		<img src="images/russia.jpg" class="personimage" />
+		<img src="images/norway.jpg" class="personimage" />
+		<img src="images/srulik.jpg" class="personimage" />
+	</div>
+	<div id="tooltip"></div>
+	<div class="person">
+		<img src="images/bharat.jpg" class="personimage" id="bm" />
+	</div>
+	<span id="exactly">Sanitation conditions</span>
+	<span>Source of Lighting</span>
+	<span>Material of Floor in households</span>
+	<span>Material of Floor in households</span>
+	<span>Source of Drinking Water</span>
+	<span>Misc Assets</span>
+	<div class="section">
+		<svg id="sanitationsvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Sanitation Conditions</span>
+			<div class="button sanitationbutton selected" text="Total">Total</div>
+			<div class="button sanitationbutton" text="Urban">Urban</div>
+			<div class="button sanitationbutton" text="Rural">Rural</div>
+			<div class="button sanitationcriteria selected" text="Within">Sanitation facilities present within the Household</div>
+			<div class="button sanitationcriteria" text="Sewer">Flush/Pour latrine connected to Piped Sewer system</div>
+			<div class="button sanitationcriteria" text="Septic">Flush/Pour latrine connected to Septic tank</div>
+			<div class="button sanitationcriteria" text="Othersys">Flush/Pour latrine connected to other system</div>
+			<div class="button sanitationcriteria" text="Withslab">Pit latrine with slab/ventilated improved pit</div>
+			<div class="button sanitationcriteria" text="Withoutslab">Pit latrine with no slab/ventilated improved pit</div>
+			<div class="button sanitationcriteria" text="NSopen">Night soil disposed into open drain</div>
+			<div class="button sanitationcriteria" text="NShuman">Night soil removed by human</div>
+			<div class="button sanitationcriteria" text="NSanimal">Night soil serviced by animal</div>
+			<div class="button sanitationcriteria" text="Without">No sanitation facility within the Household</div>
+			<div class="button sanitationcriteria" text="Public">Public Latrine</div>
+			<div class="button sanitationcriteria" text="Open">No sanitation facility/Open</div>
+			<div class="button sanitationyardstick selected" text="Perc">By Percentage</div>
+			<div class="button sanitationyardstick" text="Num">By Deciles</div>
+			<img src="images/san.jpg" class="sectionimage"></img>
+		</div>
+	</div>
+	<div class="section">
+		<svg id="lightingsvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Source of Lighting</span>
+			<div class="button lightingbutton selected" text="Total">Total</div>
+			<div class="button lightingbutton" text="Urban">Urban</div>
+			<div class="button lightingbutton" text="Rural">Rural</div>
+			<div class="button lightingcriteria selected" text="Electricity">Electricity</div>
+			<div class="button lightingcriteria" text="Kerosene">Kerosene</div>
+			<div class="button lightingcriteria" text="Solar">Solar</div>
+			<div class="button lightingcriteria" text="OtherOil">Other Oil</div>
+			<div class="button lightingcriteria" text="Other">Other</div>
+			<div class="button lightingcriteria" text="None">None</div>
+			<div class="button lightingyardstick selected" text="Perc">By Percentage</div>
+			<div class="button lightingyardstick" text="Num">By Deciles</div>
+			<img src="images/kero.jpg" class="sectionimage"></img>
+		</div>
+	</div>
+	<div class="section">
+		<svg id="roofsvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Material of Roof</span>
+			<div class="button roofbutton selected" text="Total">Total</div>
+			<div class="button roofbutton" text="Urban">Urban</div>
+			<div class="button roofbutton" text="Rural">Rural</div>
+			<div class="button roofcriteria selected" text="Grass">Grass</div>
+			<div class="button roofcriteria" text="Plastic">Plastic</div>
+			<div class="button roofcriteria" text="MachinemadeTiles">Machinemade Tiles</div>
+			<div class="button roofcriteria" text="HandmadeTiles">Handmade Tiles</div>
+			<div class="button roofcriteria" text="BurntBrick">Burnt Brick</div>
+			<div class="button roofcriteria" text="Stone">Stone</div>
+			<div class="button roofcriteria" text="Metal">Metal</div>
+			<div class="button roofcriteria" text="Concrete">Concrete</div>
+			<div class="button roofcriteria" text="Other">Other</div>
+			<div class="button roofyardstick selected" text="Perc">By Percentage</div>
+			<div class="button roofyardstick" text="Num">By Deciles</div>
+			<img src="images/roof.jpg" class="sectionimage"></img>
+		</div>
+	</div>
+	<div class="section">
+		<svg id="floorsvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Material of Floor</span>
+			<div class="button floorbutton selected" text="Total">Total</div>
+			<div class="button floorbutton" text="Urban">Urban</div>
+			<div class="button floorbutton" text="Rural">Rural</div>
+			<div class="button floorcriteria selected" text="Mud">Mud</div>
+			<div class="button floorcriteria" text="Wood">Wood</div>
+			<div class="button floorcriteria" text="Stone">Stone</div>
+			<div class="button floorcriteria" text="BurntBrick">Burnt Brick</div>
+			<div class="button floorcriteria" text="Cement">Cement</div>
+			<div class="button floorcriteria" text="FloorTiles">Floor Tiles</div>
+			<div class="button floorcriteria" text="Other">Other</div>
+			<div class="button flooryardstick selected" text="Perc">By Percentage</div>
+			<div class="button flooryardstick" text="Num">By Deciles</div>
+			<img src="images/floor.jpg" class="sectionimage"></img>
+		</div>
+	</div>
+	<div class="section">
+		<svg id="watersvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Source of Drinking Water</span>
+			<div class="button waterbutton selected" text="Total">Total</div>
+			<div class="button waterbutton" text="Urban">Urban</div>
+			<div class="button waterbutton" text="Rural">Rural</div>
+			<div class="button watercriteria selected" text="TapwaterTreated">Tapwater from treated source</div>
+			<div class="button watercriteria" text="TapwaterUntreated">Tapwater from un-treated source</div>
+			<div class="button watercriteria" text="CoveredWell">Covered well</div>
+			<div class="button watercriteria" text="UncoveredWell">Un-covered well</div>
+			<div class="button watercriteria" text="Handpump">Handpump</div>
+			<div class="button watercriteria" text="Tubewell">Tubewell/Borehole</div>
+			<div class="button watercriteria" text="Spring">Spring</div>
+			<div class="button watercriteria" text="River">River/Canal</div>
+			<div class="button watercriteria" text="Tank">Tank/Pond/Lake</div>
+			<div class="button watercriteria" text="Other">Other sources</div>
+			<div class="button wateryardstick selected" text="Perc">By Percentage</div>
+			<div class="button wateryardstick" text="Num">By Deciles</div>
+			<img src="images/handpump.jpg" class="sectionimage"></img>
+		</div>
+	</div>
+	<div class="section">
+		<svg id="miscsvg" viewBox="15 0 625 750"></svg>
+		<div class="info">
+			<span>Misc Assets</span>
+			<div class="button miscbutton selected" text="Total">Total</div>
+			<div class="button miscbutton" text="Urban">Urban</div>
+			<div class="button miscbutton" text="Rural">Rural</div>
+			<div class="button misccriteria selected" text="Bank">Banking Services</div>
+			<div class="button misccriteria" text="Radio">Radio/Transistor</div>
+			<div class="button misccriteria" text="Television">Television</div>
+			<div class="button misccriteria" text="ComputerInternet">Computer with Internet</div>
+			<div class="button misccriteria" text="ComputerNoInternet">Computer with no Internet</div>
+			<div class="button misccriteria" text="Landline">Landline</div>
+			<div class="button misccriteria" text="Mobile">Mobile</div>
+			<div class="button misccriteria" text="Both">Landline/Mobile</div>
+			<div class="button misccriteria" text="Bicycle">Bicycle</div>
+			<div class="button misccriteria" text="Scooter">Scooter/Motorcycle/Moped</div>
+			<div class="button misccriteria" text="Car">Car/Jeep/Van</div>
+			<div class="button miscyardstick selected" text="Perc">By Percentage</div>
+			<div class="button miscyardstick" text="Num">By Deciles</div>
+		</div>
+	</div>
+
+</body>
+<script src="interactive.js" charset="utf-8"></script>
+</html>
