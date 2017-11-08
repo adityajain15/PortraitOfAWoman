@@ -1,5 +1,6 @@
 <html>
 <head>
+	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="d3.js" charset="utf-8"></script>
@@ -9,8 +10,31 @@
 	<h1>The Portrait of a Woman</h1>
 	<span>Aditya Jain</span>
 	<img src="images/route.png" class="slideimage"/>
+	<p class="slideDescription">My name is Aditya. I was born and raised in the capital of India, a city of more than 16 million people, called New Delhi</p>
+	<p class="slideDescription">
+	I left home when I was 18 years old to attend college in the United States</p>
 	<img src="images/uic.jpg" class="slideimage"/>
-	<img src="images/disc.jpg" class="slideimage"/>
+	<p class="slideDescription">Thats a picture of my <a href="https://en.wikipedia.org/wiki/University_of_Illinois_at_Chicago">alma mater</a></p>
+	<p class="slideDescription">College, as it turned out, was a good time to have an identity crisis. Everyone around me was learning more about some aspect of their identity</p> 
+	<p class="slideDescription">
+	Some people were coming out of closets or questioning their gender identity. Some started to question their faith. For many others it was a realization of their disadvantages/privilege due to socio-political structures based on race, class and (for my friends back home) caste</p>
+
+
+	<img src="images/disc.jpg" id="disc" class="slideimage"/>
+	<p class="slideDescription">
+		I had questions of my own
+	</p>
+	<p class="slideDescription">
+		The Republic of India is a state that was formed in 1947, however the Indian civilization itself traces its root back to 3300—1300 BCE. Through out the ages, the Indian subcontinent has seen rise and fall of many empires. South Asia as it exists today is an extremely diverse subcontinent with many ethnicities, languages and religions.
+	</p>
+
+	<p class="slideDescription">
+		As I learned more about this remarkable nation I started questioning what it meant for something to be called Indian. In the face of such mind-boggling diversity, the mathematical idea of an ‘average Indian’ breaks down. It was imperative for me to somehow visualize the feeling of being Indian. 
+	</p>
+
+	<p class="slideDescription">
+		But here's the problem: How does one visualize the abstract idea of a nation in a way that articulates its values and aspirations?
+	</p>
 	<div class="person">
 		<img src="images/italia.jpg" class="personimage" />
 		<img src="images/helvetia.jpg" class="personimage" />
@@ -22,16 +46,40 @@
 		<img src="images/norway.jpg" class="personimage" />
 		<img src="images/srulik.jpg" class="personimage" />
 	</div>
+	<p class="slideDescription">
+		It turns out that artists have been doing this for a while now. The images you see above are National Personifications of the nations they represent.  
+	</p>
+	<p class="slideDescription">
+		From top to bottom, left to right: Italia, the national personification of Italy. Hevetia for Switzerland. Handala for Palestine. Marianne for France. Uncle Sam and Britannia for the United States and Britain respectively. Germania for Germany. Mother Russia for Russia. Mother Norway for Norway. Srulik for Israel. 
+	</p>
+	<p class="slideDescription">
+		Each personification says something about the nation that it represents. Francisco Hayez's painting “Meditation on the History of Italy” was painted after a failed uprising. Italia's eyes, in the painting, reflect that disappointment. Similarly Handala the boy from Palestine, hands clasped at his back, represents the defiance of the Palestian people.  
+	</p>
 	<div id="tooltip"></div>
 	<div class="person">
 		<img src="images/bharat.jpg" class="personimage" id="bm" />
 	</div>
+	<p class="slideDescription">
+		And this is one of the first known visualizations of India.  
+	</p>
+	<p class="slideDescription">
+		Painted by Abhinandranath Tagore, “Bharat Mata” or Mother India is an ascetic who wears Saffron-colored robes—A color of renunciation. She holds objects that represent the bare necessities of life: Clothing, Knowledge, Food and Spirtuality.  
+	</p>
 	<span id="exactly">Sanitation conditions</span>
 	<span>Source of Lighting</span>
 	<span>Material of Floor in households</span>
-	<span>Material of Floor in households</span>
+	<span>Material of Roof in households</span>
 	<span>Source of Drinking Water</span>
 	<span>Misc Assets</span>
+	<p class="slideDescription">
+		As beautiful and moving that portrait is for me, I wondered if I could make a modern portrait of the woman called India using data and code. 
+	</p>
+	<p class="slideDescription">
+		There are many datasets out there that reflect demographic diversity in India but I disregarded them on purpose. I wished to explore another aspect of diversity thats not as often talked about—The diversity in living conditions.  
+	</p>
+	<p class="slideDescription">
+		By choosing the datasets listed above (Census of India 2011), I hoped to visualize the diversity in the day-to-day experience of millions in India.
+	</p>
 	<div class="section">
 		<svg id="sanitationsvg" viewBox="15 0 625 750"></svg>
 		<div class="info">

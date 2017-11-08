@@ -309,7 +309,7 @@ function visualizeit(map,theSVG,buttonClass,criteriaType,yardstickType){
 
 	theSVG.selectAll(".district")
 		.attr("fill",function(d){
-      console.log(d.id);
+      //console.log(d.id);
 			var theDistrict=map.get("District - "+d.id).get(buttonClass);
 	        var innerMap=d3.map(theDistrict[0]);
 	        var number = innerMap.get(criteriaType);
